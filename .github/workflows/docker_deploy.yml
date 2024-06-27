@@ -4,11 +4,11 @@ on:
     push:
       branches: [ "main" ]
   
-  env:
+env:
     IMAGE_NAME: weicong93/cicd_demo   # Format: <dockerhub_account>/<repo>
     IMAGE_TAG: ${{ github.sha }}
   
-  jobs:
+jobs:
     build-and-publish-docker-image:
       runs-on: ubuntu-latest
       steps:
